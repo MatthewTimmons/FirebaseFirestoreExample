@@ -11,7 +11,7 @@ import com.matthewtimmons.firebasefirestoreexample.models.MovieTitles
 class MovieTitleRecyclerAdatper(var movieTitles: List<MovieTitles>): RecyclerView.Adapter<MovieTitleRecyclerAdatper.MovieTitleViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, position: Int): MovieTitleViewHolder {
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.movie_card_view, viewGroup, false)
+        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.movie_card_view_title_only, viewGroup, false)
         return MovieTitleViewHolder(view)
     }
 

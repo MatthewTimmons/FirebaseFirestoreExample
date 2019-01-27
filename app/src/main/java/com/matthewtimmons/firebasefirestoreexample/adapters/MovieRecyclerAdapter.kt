@@ -23,9 +23,18 @@ class MovieRecyclerAdapter(var movies: List<Movie>): RecyclerView.Adapter<MovieR
         val currentMovieTitle = movies[position]
 
         viewHolder.titleTextView.text = currentMovieTitle.title
+        viewHolder.genresTextView.text = currentMovieTitle.genres
+        viewHolder.ratingTextView.text = currentMovieTitle.rating
+        viewHolder.releaseDateTextView.text = currentMovieTitle.releaseDate
+
+        // TODO Set up poster Image View using Picasso
+
     }
 
     class MovieViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val titleTextView = view.findViewById<TextView>(R.id.movie_title_text_view)
+        val genresTextView = view.findViewById<TextView>(R.id.movie_genres_text_view)
+        val ratingTextView = view.findViewById<TextView>(R.id.movie_rating_text_view)
+        val releaseDateTextView = view.findViewById<TextView>(R.id.movie_release_date_text_view)
     }
 }
