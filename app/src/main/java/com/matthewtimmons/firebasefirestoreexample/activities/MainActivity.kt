@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.RecyclerView
 import com.matthewtimmons.firebasefirestoreexample.R
+import com.matthewtimmons.firebasefirestoreexample.adapters.MovieRecyclerAdapter
 import com.matthewtimmons.firebasefirestoreexample.adapters.MovieTitleRecyclerAdatper
 import com.matthewtimmons.firebasefirestoreexample.models.Movie
 import com.matthewtimmons.firebasefirestoreexample.models.MovieTitles
@@ -16,12 +17,12 @@ class MainActivity : AppCompatActivity() {
 
         // TODO Replace this mock instance with a call to retrieve all Movie Titles from database
         // Mock list of Movies
-        val mockMovies = getMockMoviesTitleOnly()
+        val mockMovies = getMockMovies()
 
         // Get and set recyclerview
         val recyclerView = findViewById<RecyclerView>(R.id.movies_recycler_view)
-        val recyclerViewAdapter = MovieTitleRecyclerAdatper(mockMovies) // Movie titles only
-//        val recyclerViewAdapter = MovieTitleRecyclerAdatper(mockMovies) // Full movies
+//        val recyclerViewAdapter = MovieTitleRecyclerAdatper(mockMovies) // Movie titles only
+        val recyclerViewAdapter = MovieRecyclerAdapter(mockMovies) // Full movies
         recyclerView.adapter = recyclerViewAdapter
     }
 
