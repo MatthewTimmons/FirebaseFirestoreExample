@@ -2,6 +2,7 @@ package com.matthewtimmons.firebasefirestoreexample.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.BottomNavigationView
 import android.support.v4.view.ViewPager
 import android.support.v7.widget.RecyclerView
 import com.matthewtimmons.firebasefirestoreexample.R
@@ -20,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         val viewpager = findViewById<ViewPager>(R.id.viewpager)
         val viewPagerAdapter = EventPagerAdapter(supportFragmentManager)
         viewpager.adapter = viewPagerAdapter
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation);
+
     }
 
 }
