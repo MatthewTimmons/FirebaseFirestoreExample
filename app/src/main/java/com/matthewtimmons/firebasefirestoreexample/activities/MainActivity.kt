@@ -22,8 +22,26 @@ class MainActivity : AppCompatActivity() {
         val viewPagerAdapter = EventPagerAdapter(supportFragmentManager)
         viewpager.adapter = viewPagerAdapter
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation);
-
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.action_movies -> {
+                    viewpager.currentItem = viewPagerAdapter.INDEX_MOVIES
+                    true
+                }
+                R.id.action_games -> {
+                    viewpager.currentItem = viewPagerAdapter.INDEX_GAMES
+                    true
+                }
+                R.id.action_concerts -> {
+                    viewpager.currentItem = viewPagerAdapter.INDEX_CONCERTS
+                    true
+                }
+                else -> {
+                    false
+                }
+            }
+        }
     }
 
 }
