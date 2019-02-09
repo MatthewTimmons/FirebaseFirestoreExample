@@ -38,13 +38,13 @@
             <TextView
                 android:id="@+id/game_title_text_view"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/release_consoles_text_view"
+                app:layout_constraintBottom_toTopOf="@+id/concert_location_text_view"
                 app:layout_constraintTop_toTopOf="parent"
                 style="@style/CardTextView"
                 tools:text="Avengers: Infinity War" />
 
             <TextView
-                android:id="@+id/release_consoles_text_view"
+                android:id="@+id/concert_location_text_view"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/game_rating_text_view"
                 app:layout_constraintTop_toBottomOf="@+id/game_title_text_view"
@@ -55,7 +55,7 @@
                 android:id="@+id/game_rating_text_view"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/game_release_date_text_view"
-                app:layout_constraintTop_toBottomOf="@+id/release_consoles_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/concert_location_text_view"
                 style="@style/CardTextView"
                 tools:text="PG-13" />
 

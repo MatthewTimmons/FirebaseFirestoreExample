@@ -1,6 +1,6 @@
 package com.matthewtimmons.firebasefirestoreexample.models
 
-class Game(
+data class Game(
     val title: String,
     val releaseDate: String,
     val releaseConsoles: String,

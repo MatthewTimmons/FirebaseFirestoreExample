@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.matthewtimmons.firebasefirestoreexample.R
 import com.matthewtimmons.firebasefirestoreexample.models.Game
-import com.matthewtimmons.firebasefirestoreexample.models.Movie
 
 class GameRecyclerAdapter(var games: List<Game>): RecyclerView.Adapter<GameRecyclerAdapter.GameViewHolder>() {
 
@@ -34,7 +33,7 @@ class GameRecyclerAdapter(var games: List<Game>): RecyclerView.Adapter<GameRecyc
 
     class GameViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val titleTextView = view.findViewById<TextView>(R.id.game_title_text_view)
-        val releaseConsolesTextView = view.findViewById<TextView>(R.id.release_consoles_text_view)
+        val releaseConsolesTextView = view.findViewById<TextView>(R.id.concert_location_text_view)
         val ratingTextView = view.findViewById<TextView>(R.id.game_rating_text_view)
         val releaseDateTextView = view.findViewById<TextView>(R.id.game_release_date_text_view)
     }
