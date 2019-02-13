@@ -8,10 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.matthewtimmons.firebasefirestoreexample.R
 import com.matthewtimmons.firebasefirestoreexample.adapters.GameRecyclerAdapter
-import com.matthewtimmons.firebasefirestoreexample.adapters.MovieRecyclerAdapter
 import com.matthewtimmons.firebasefirestoreexample.models.Game
-import com.matthewtimmons.firebasefirestoreexample.models.Movie
-import com.matthewtimmons.firebasefirestoreexample.models.MovieTitles
 
 class GamesFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, viewGroup: ViewGroup?, savedInstanceState: Bundle?): View? {

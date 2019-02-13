@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.matthewtimmons.firebasefirestoreexample.R
-import com.matthewtimmons.firebasefirestoreexample.models.MovieTitles
+import com.matthewtimmons.firebasefirestoreexample.models.MovieTitle
 
-class MovieTitleRecyclerAdatper(var movieTitles: List<MovieTitles>): RecyclerView.Adapter<MovieTitleRecyclerAdatper.MovieTitleViewHolder>() {
+class MovieTitleRecyclerAdatper(var movieTitles: List<MovieTitle>): RecyclerView.Adapter<MovieTitleRecyclerAdatper.MovieTitleViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, position: Int): MovieTitleViewHolder {
         val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.movie_card_view_title_only, viewGroup, false)

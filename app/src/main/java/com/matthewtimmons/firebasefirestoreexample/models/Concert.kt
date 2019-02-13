@@ -6,3 +6,8 @@ data class Concert(
     val date: String,
     val imageUrl: String
 )
+
+// Empty constructor needed for Firestore
+{
+    constructor() : this(ArrayList<String>(), "", "", "")
+}

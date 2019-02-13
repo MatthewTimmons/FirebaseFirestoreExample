@@ -4,13 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.view.ViewPager
-import android.support.v7.widget.RecyclerView
 import com.matthewtimmons.firebasefirestoreexample.R
 import com.matthewtimmons.firebasefirestoreexample.adapters.EventPagerAdapter
-import com.matthewtimmons.firebasefirestoreexample.adapters.MovieRecyclerAdapter
-import com.matthewtimmons.firebasefirestoreexample.adapters.MovieTitleRecyclerAdatper
-import com.matthewtimmons.firebasefirestoreexample.models.Movie
-import com.matthewtimmons.firebasefirestoreexample.models.MovieTitles
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,6 +37,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        // Set Bottom Nav Bar to View.GONE //
+//        bottomNavigationView.visibility = View.GONE
     }
 
 }
