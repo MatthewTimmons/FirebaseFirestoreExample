@@ -7,3 +7,8 @@ data class Game(
     val rating: String,
     val photoUrl: String
 )
+
+// Empty constructor needed for Firestore
+{
+    constructor() : this("", "", "", "", "")
+}

@@ -20,8 +20,8 @@ class ConcertsFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // TODO Replace this mock instance with a call to retrieve all Concerts from database
         // Mock list of Concerts
+        // TODO Replace this mock instance with a call to retrieve all Concerts from database
         val mockConcerts = getMockConcerts()
 
         // Get and set recyclerview
@@ -30,7 +30,6 @@ class ConcertsFragment: Fragment() {
         recyclerView.adapter = recyclerViewAdapter
     }
 
-    // TODO Finish the creation of mock concerts
     fun getMockConcerts(): List<Concert> {
         return listOf(
             Concert(

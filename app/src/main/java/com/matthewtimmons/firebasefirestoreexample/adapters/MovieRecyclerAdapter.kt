@@ -1,7 +1,6 @@
 package com.matthewtimmons.firebasefirestoreexample.adapters
 
 import android.content.Intent
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +9,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.matthewtimmons.firebasefirestoreexample.R
 import com.matthewtimmons.firebasefirestoreexample.activities.DetailsActivity
-import com.matthewtimmons.firebasefirestoreexample.activities.MainActivity
 import com.matthewtimmons.firebasefirestoreexample.models.Movie
 import com.squareup.picasso.Picasso
 
@@ -26,22 +24,22 @@ class MovieRecyclerAdapter(var movies: List<Movie>): RecyclerView.Adapter<MovieR
     }
 
     override fun onBindViewHolder(viewHolder: MovieViewHolder, position: Int) {
-        val currentMovieTitle = movies[position]
+        val currentMovie = movies[position]
 
         // Set Text Views
-        viewHolder.titleTextView.text = currentMovieTitle.title
-        viewHolder.genresTextView.text = currentMovieTitle.genres
-        viewHolder.ratingTextView.text = currentMovieTitle.rating
-        viewHolder.releaseDateTextView.text = currentMovieTitle.releaseDate
+        viewHolder.titleTextView.text = currentMovie.title
+        viewHolder.genresTextView.text = currentMovie.genres
+        viewHolder.ratingTextView.text = currentMovie.rating
+        viewHolder.releaseDateTextView.text = currentMovie.releaseDate
 
         // Set poster ImageView
-        Picasso.get().load(currentMovieTitle.photoUrl).error(R.drawable.broken_image).into(viewHolder.moviePosterImageView)
+        Picasso.get().load(currentMovie.photoUrl).error(R.drawable.broken_image).into(viewHolder.moviePosterImageView)
 
         // Set click listener
         viewHolder.itemView.setOnClickListener {
             val intent = Intent(it.context, DetailsActivity::class.java)
+            intent.putExtra("title", currentMovie.title)
             it.context.startActivity(intent)
-
         }
     }
 

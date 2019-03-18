@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.firebase.firestore.FirebaseFirestore
 import com.matthewtimmons.firebasefirestoreexample.R
 import com.matthewtimmons.firebasefirestoreexample.adapters.GameRecyclerAdapter
 import com.matthewtimmons.firebasefirestoreexample.models.Game
@@ -19,8 +20,8 @@ class GamesFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // TODO Replace this mock instance with a call to retrieve all Game Titles from database
         // Mock list of Games
+        // TODO Replace this mock instance with a call to retrieve all Games from database
         val mockGames = getMockGames()
 
         // Get and set recyclerview

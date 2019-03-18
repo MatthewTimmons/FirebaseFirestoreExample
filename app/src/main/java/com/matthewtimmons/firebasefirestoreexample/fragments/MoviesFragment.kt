@@ -22,14 +22,14 @@ class MoviesFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // TODO Replace this mock instance with a call to retrieve all Movie Titles from database
         // Movie Titles Only //
+        // TODO Replace this mock instance with a call to retrieve all Movie Titles from database
         val mockMovieTitles = getMockMoviesTitleOnly()
-//        val recyclerViewAdapter = MovieTitleRecyclerAdatper(mockMovieTitles) // Movie titles only
+        val recyclerViewAdapter = MovieTitleRecyclerAdatper(mockMovieTitles) // Movie titles only
 
         // Full Movie Details //
-        val mockMovies = getMockMovies()
-        val recyclerViewAdapter = MovieRecyclerAdapter(mockMovies) // Full movies
+//        val mockMovies = getMockMovies()
+//        val recyclerViewAdapter = MovieRecyclerAdapter(mockMovies) // Full movies
 
         // Get and set recyclerview
         val recyclerView = view.findViewById<RecyclerView>(R.id.movies_recycler_view)

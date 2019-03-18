@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.view.ViewPager
+import android.view.View
 import com.matthewtimmons.firebasefirestoreexample.R
 import com.matthewtimmons.firebasefirestoreexample.adapters.EventPagerAdapter
 
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Set Bottom Nav Bar to View.GONE //
-//        bottomNavigationView.visibility = View.GONE
+        bottomNavigationView.visibility = View.GONE
     }
 
 }
