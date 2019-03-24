@@ -4,33 +4,33 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
 import com.matthewtimmons.firebasefirestoreexample.R
-import com.matthewtimmons.firebasefirestoreexample.models.Concert
-import com.matthewtimmons.firebasefirestoreexample.models.Game
-import com.matthewtimmons.firebasefirestoreexample.models.Movie
-import com.matthewtimmons.firebasefirestoreexample.models.MovieTitle
+import com.matthewtimmons.firebasefirestoreexample.models.*
 
 class InitializeFirestoreData : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_init_firestore)
         val firestore = FirebaseFirestore.getInstance()
 
         for (movieTitle in getMockMoviesTitleOnly()) {
-            firestore.collection("movieTitles").add(movieTitle)
+            firestore.collection("movieTitles").document(movieTitle.title).set(movieTitle)
         }
 
         for (movie in getMockMovies()) {
-            firestore.collection("movies").add(movie)
+            firestore.collection("movies").document(movie.title).set(movie)
         }
 
         for (concert in getMockConcerts()) {
-            firestore.collection("concerts").add(concert)
+            firestore.collection("concerts").document(concert.concertBandsArray[0]).set(concert)
         }
 
         for (game in getMockGames()) {
-            firestore.collection("games").add(game)
+            firestore.collection("games").document(game.title).set(game)
         }
+
+        val exampleUser = User("ExampleUser")
+        firestore.collection("users").document("exampleUser").set(exampleUser)
     }
 
     fun getMockMoviesTitleOnly(): List<MovieTitle> {
