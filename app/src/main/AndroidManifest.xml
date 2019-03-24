@@ -17,6 +17,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.DetailsActivity"/>
+
+
+        <activity android:name=".helpers.InitializeFirestoreData">
+            <!--Uncomment the section below to set up starting point for Firestore database-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        </activity>
     </application>
 
 </manifest>
