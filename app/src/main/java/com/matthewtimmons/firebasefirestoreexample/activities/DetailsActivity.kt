@@ -10,6 +10,7 @@ import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.matthewtimmons.firebasefirestoreexample.R
 import com.matthewtimmons.firebasefirestoreexample.models.Movie
+import com.matthewtimmons.firebasefirestoreexample.models.User
 import com.squareup.picasso.Picasso
 
 class DetailsActivity: AppCompatActivity() {

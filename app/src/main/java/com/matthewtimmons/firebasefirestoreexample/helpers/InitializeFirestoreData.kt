@@ -29,7 +29,7 @@ class InitializeFirestoreData : AppCompatActivity() {
             firestore.collection("games").document(game.title).set(game)
         }
 
-        val exampleUser = User("ExampleUser")
+        val exampleUser = User("ExampleUser", arrayListOf<String>(), arrayListOf<String>(), arrayListOf<String>())
         firestore.collection("users").document("exampleUser").set(exampleUser)
     }
 
